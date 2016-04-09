@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+		<link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+		<!-- <script src="javascripts/howler.js"></script> 
+		<script>
+			var sound = new Howl({
+			  urls: ['sounds/Kanon05.ogg', 'sounds/Kanon05.ogg']
+			});//.play();
+			// shoot the laser!
+			//sound.play('laser');
+		</script>
+		-->
+		<script>
+			sound=new Audio('sounds/Kanon05.ogg');
+		</script>
+	</head>
+	<body>
+		<div id="main_content_wrap" class="outer">
+			<p>Content</p>
+			<img src="images/h1.png">
+			<p>吼啊</p>
+			<input type="button" value="play" id='playButton'>
+		</div>
+	</body>
+<script>
+	function playCallback(){
+		sound.play();
+	};
+	var button=document.getElementById('playButton');
+	button.onclick=playCallback;
+</script>
+</html>
